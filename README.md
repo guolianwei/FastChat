@@ -173,6 +173,9 @@ Vicuna-13B with 8-bit compression can run on a single NVIDIA 3090/4080/T4/V100(1
 ```
 python3 -m fastchat.serve.cli --model-path /path/to/model/weights --load-8bit
 ```
+``` bat
+python -m fastchat.serve.cli --model-path D:/llama/LLaMAHF/output/vicuna-7b --device cpu --load-8bit
+```
 
 In addition to that, you can add `--cpu-offloading` to commands above to offload weights that don't fit on your GPU onto the CPU memory. This requires 8-bit compression to be enabled and the bitsandbytes package to be installed, which is only available on linux operating systems.
 
