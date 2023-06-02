@@ -110,7 +110,9 @@ It will automatically download the weights from a Hugging Face [repo](https://hu
 ```bash
 python3 -m fastchat.serve.cli --model-path lmsys/fastchat-t5-3b-v1.0
 ```
-
+```bat
+python -m fastchat.serve.cli --model-path ./vicuna-7b --device cpu --load-8bit
+```
 ## Inference with Command Line Interface
 
 (Experimental Feature: You can specify `--style rich` to enable rich text output and better text streaming quality for some non-ASCII content. This may not work properly on certain terminals.)
