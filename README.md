@@ -54,7 +54,14 @@ We release [Vicuna](https://vicuna.lmsys.org/) weights as delta weights to compl
 You can add our delta to the original LLaMA weights to obtain the Vicuna weights. Instructions:
 
 1. Get the original LLaMA weights in the Hugging Face format by following the instructions [here](https://huggingface.co/docs/transformers/main/model_doc/llama).
-2. Use the following scripts to get Vicuna weights by applying our delta. They will automatically download delta weights from our Hugging Face [account](https://huggingface.co/lmsys).
+or 
+``` bat
+python transformers/src/transformers/models/llama/convert_llama_weights_to_hf.py ^
+  --input_dir D:/llama/LLaMA/LLaMA/ ^
+  --model_size 7B ^
+  --output_dir D:/llama/LLaMAHF/output/llama-7b
+```
+3. Use the following scripts to get Vicuna weights by applying our delta. They will automatically download delta weights from our Hugging Face [account](https://huggingface.co/lmsys).
 
 **NOTE**:
 Weights v1.1 are only compatible with ```transformers>=4.28.0``` and ``fschat >= 0.2.0``.
