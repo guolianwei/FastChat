@@ -81,6 +81,12 @@ python3 -m fastchat.model.apply_delta \
     --target-model-path /path/to/output/vicuna-13b \
     --delta-path lmsys/vicuna-13b-delta-v1.1
 ```
+```bash win
+python -m fastchat.model.apply_delta ^
+--base D:/llama/LLaMAHF/output/llama-7b ^
+--target D:/llama/LLaMAHF/output/vicuna-7b ^
+--delta D:/huggingface/vicuna-7b-delta-v1.1
+```
 
 #### Old weights
 See [docs/vicuna_weights_version.md](docs/vicuna_weights_version.md) for all versions of weights and their differences.
